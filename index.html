@@ -33,7 +33,21 @@
 <script type="text/javascript" src="js/wow.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
 <script src="contactform/contactform.js"></script>
+<script>
+jQuery(function () {
+    var $els = $('div[id^=quote]'),
+        i = 0,
+        len = $els.length;
 
+    $els.slice(1).hide();
+    setInterval(function () {
+        $els.eq(i).fadeOut(function () {
+            i = (i + 1) % len
+            $els.eq(i).fadeIn();
+        })
+    }, 2500)
+})
+</script>
 <!-- =======================================================
     Theme Name: Knight
     Theme URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
@@ -53,7 +67,13 @@
         </figure>
         <h1 class="animated fadeInDown delay-07s">Welcome To <span style="color:#8cc63f;">myHarvest</span></h1>
         <ul class="we-create animated fadeInUp delay-1s">
-            <li>#Chemical Free #Roof Gardening #Healthy Hobby</li>
+            <div id="quote2">
+            <li style="text-transform: none;margin:10px;">With myHarvest, you can now become an Urban Farmer !</li>
+            </div>
+            <div id="quote1">
+            <li style="text-transform: none;margin:10px;">Now enjoy Fresh &amp; Healthy food that you can trust !</li>
+            </div>
+            <li style="text-transform: none;">#BalconyTerraceGarden #ChemicalFree #Healthy #GreenHobby</li>
         </ul>
             <a class="link animated fadeInUp delay-1s" href="#">Get Started</a>
         </div>
@@ -62,35 +82,36 @@
         <div>
             <div class="row main"> 
                 <div class="main-login main-center">
-                <h5>Sign up once and watch any of our free demos.</h5>
+                <h5 style="font-weight:700!important;">Interested to have a Kitchen Garden at Home?</h5>
+                <h5>Relax...! Share your details &amp; We'll set it up!</h5>
                     <form class="" method="post" action="#">
                         
                         <div class="form-group">
-                            <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                            <!--label for="name" class="cols-sm-2 control-label">Your Name</label-->
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                                    <input type="text" class="form-control" name="name" id="name"  placeholder="Your Name"/>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="cols-sm-2 control-label" style="text-align: left!important;">Your eMail ID</label>
+                            <!-- <label for="email" class="cols-sm-2 control-label" style="text-align: left!important;">Your eMail ID</label> -->
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="email" id="email"  placeholder="Your Mobile Number"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- <label for="username" class="cols-sm-2 control-label">Phone Number</label> -->
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="username" class="cols-sm-2 control-label">Phone Number</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                                    <input type="text" class="form-control" name="username" id="username"  placeholder="Your Email"/>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +136,7 @@
                             </div>
                         </div>-->
                         <div class="form-group ">
-                            <a href="http://deepak646.blogspot.in" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
+                            <a href="" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button"><strong>Register</strong></a>
                         </div>
                         
                     </form>
@@ -158,11 +179,11 @@
                 <!--P class="padding-b">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.</P-->
                 <div class="featured-box">
                     <div class="featured-box-col1 wow fadeInRight delay-02s">
-                        <i class="fa-smile-o "></i>
+                        <i class="fa-heartbeat"></i>
                     </div>  
                     <div class="featured-box-col2 wow fadeInRight delay-02s">
-                        <h3>Make gardening your hobby</h3>
-                        <p>Gardening has been the hobby for a lot of people, its time to take a step towards that!</p>
+                        <h3>Better health &amp; Nutrition</h3>
+                        <p>Include more freshly picked home grown greens and vegetables in your diet</p>
                     </div>    
                 </div>
                 <div class="featured-box">
@@ -170,17 +191,26 @@
                         <i class="fa-leaf"></i>
                     </div>  
                     <div class="featured-box-col2 wow fadeInRight delay-04s">
-                        <h3>Healthier &amp; Organic Living</h3>
-                        <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+                        <h3>Make gardening your hobby</h3>
+                        <p>Relax and feel de-stressed as you experience the joy of planting, watering or harvesting. </p>
                     </div>    
                 </div>
                 <div class="featured-box">
                     <div class="featured-box-col1 wow fadeInRight delay-06s">
-                        <i class="fa-magic"></i>
+                        <i class="fa-pagelines"></i>
                     </div>  
                     <div class="featured-box-col2 wow fadeInRight delay-06s">
-                        <h3>We make it Easier for you</h3>
-                        <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+                        <h3>Connect to Nature</h3>
+                        <p>Become eco-friendly as you grow more plants.  You naturally increase green cover and reduce carbon footprint. </p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-06s">
+                        <i class="fa-home"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>Own a green patch at home</h3>
+                        <p>Turn your rooftop, balcony or unused space into productive urban farms.</p>
                     </div>    
                 </div>
                 <a class="Learn-More" href="#">Learn More</a>
@@ -246,19 +276,19 @@
     <div class="container">
         <div class="row">
             <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
-                <img  src="img/organic-banner-2.jpg" style="padding-top: 50px;" alt="">
+                <img  src="img/organic-banner-2.jpg" style="padding-top: 120px;" alt="">
             </figure>
             <div class="col-lg-1"></div>
             <div class="col-lg-6 col-sm-8 featured-work">
-                <h2>How we work ?</h2>
-                <P style="line-height: 30px;" class="padding-b">Its all about taking your first step towards a healthy and organic living! But how do you take that first step? Here is what we do...!</P>
+                <h2>How to get started ?</h2>
+                <P style="line-height: 30px;" class="padding-b">It’s all about your first step towards a happier and healthier living. You have the interest &amp; the space to grow but not sure of where to begin? Here is what we at “myHarvest” do !</P>
                 <div class="featured-box">
                     <div class="featured-box-col1 wow fadeInRight delay-02s">
                         <i class="fa-circle-thin"></i>
                     </div>  
                     <div class="featured-box-col2 wow fadeInRight delay-02s">
-                        <h3>YOU CHOOSE PACKAGE</h3>
-                        <p>We have different packages you can scroll down to know more! </p>
+                        <h3>You choose a gardening package</h3>
+                        <p>We offer various kitchen gardening packages that enables your family to grow greens, vegetables, herbs and fruits. We also customize the garden as per your family needs. <a>View Packages</a></p>
                     </div>    
                 </div>
                 <div class="featured-box">
@@ -266,8 +296,8 @@
                         <i class="fa-circle-o"></i>
                     </div>  
                     <div class="featured-box-col2 wow fadeInRight delay-04s">
-                        <h3>WE SET IT UP</h3>
-                        <p>myHarvest team sets up the garden at your place.  </p>
+                        <h3>We Setup the garden</h3>
+                        <p>On the scheduled date, our garden expert team brings all gardening materials including the soil, set up the kitchen garden and guides you to become an urban farmer.</p>
                     </div>    
                 </div>
                 <div class="featured-box">
@@ -275,8 +305,8 @@
                         <i class="fa-dot-circle-o"></i>
                     </div>  
                     <div class="featured-box-col2 wow fadeInRight delay-06s">
-                        <h3>YOU GROW</h3>
-                        <p>Enjoy growing your own and harvesting organic food.</p>
+                        <h3>YOU GROW and harvest</h3>
+                        <p>Every day you water the plants and observe them closely. Within a month, you can start harvesting and eating home grown food.</p>
                     </div>    
                 </div>
                 <div class="featured-box">
@@ -285,7 +315,7 @@
                     </div>  
                     <div class="featured-box-col2 wow fadeInRight delay-06s">
                         <h3>WE HELP YOU MAINTAIN</h3>
-                        <p>We provide garden maintenance services. </p>
+                        <p>Planting a kitchen garden is a lot like raising children. Plants need your care &amp; minimal time. Having realized this, we are there to make sure your plants are healthy all the time. </p>
                     </div>    
                 </div>
                 <a class="Learn-More" href="#">Learn More</a>
@@ -352,6 +382,169 @@
     </div>
 </section><!--business-talking-end-->
 
+<section id="pricing1">
+
+<div class="container content1">
+    <div class="row">
+        <!-- Pricing --><br.>
+        <h2>Pricing</h2>
+        <h6>Take a closer look into our amazing team. We won’t bite.</h6>
+        
+        <div class="col-md-3">
+            <div class="pricing hover-effect">
+                <div class="pricing-head">
+                    <h3>Green Kits <span>
+                    Just for starters!</span>
+                    </h3>
+                    <h4><i>$</i>5<i>.49</i>
+                    <span>
+                    Per Month </span>
+                    </h4>
+                </div>
+                <ul class="pricing-content list-unstyled">
+                    <li>
+                        At vero eos
+                    </li>
+                    <li>
+                        No Support
+                    </li>
+                    <li>
+                        Fusce condimentum
+                    </li>
+                    <li>
+                        Ut non libero
+                    </li>
+                    <li>
+                        Consecte adiping elit
+                    </li>
+                </ul>
+                <div class="pricing-footer">
+                    <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                    </p>
+                    <a href="javascript:;" class="btn yellow-crusta">
+                    Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="pricing hover-effect">
+                <div class="pricing-head">
+                    <h3>Pro <span>
+                    Officia deserunt mollitia </span>
+                    </h3>
+                    <h4><i>$</i>8<i>.69</i>
+                    <span>
+                    Per Month </span>
+                    </h4>
+                </div>
+                <ul class="pricing-content list-unstyled">
+                    <li>
+                        At vero eos
+                    </li>
+                    <li>
+                        No Support
+                    </li>
+                    <li>
+                        Fusce condimentum
+                    </li>
+                    <li>
+                        Ut non libero
+                    </li>
+                    <li>
+                        Consecte adiping elit
+                    </li>
+                </ul>
+                <div class="pricing-footer">
+                    <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                    </p>
+                    <a href="javascript:;" class="btn yellow-crusta">
+                    Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="pricing pricing-active hover-effect">
+                <div class="pricing-head pricing-head-active">
+                    <h3>Expert <span>
+                    Officia deserunt mollitia </span>
+                    </h3>
+                    <h4><i>$</i>13<i>.99</i>
+                    <span>
+                    Per Month </span>
+                    </h4>
+                </div>
+                <ul class="pricing-content list-unstyled">
+                    <li>
+                        At vero eos
+                    </li>
+                    <li>
+                        No Support
+                    </li>
+                    <li>
+                        Fusce condimentum
+                    </li>
+                    <li>
+                        Ut non libero
+                    </li>
+                    <li>
+                        Consecte adiping elit
+                    </li>
+                </ul>
+                <div class="pricing-footer">
+                    <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                    </p>
+                    <a href="javascript:;" class="btn yellow-crusta">
+                    Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="pricing hover-effect">
+                <div class="pricing-head">
+                    <h3>Hi-Tech <span>
+                    Officia deserunt mollitia </span>
+                    </h3>
+                    <h4><i>$</i>99<i>.00</i>
+                    <span>
+                    Per Month </span>
+                    </h4>
+                </div>
+                <ul class="pricing-content list-unstyled">
+                    <li>
+                        At vero eos
+                    </li>
+                    <li>
+                        No Support
+                    </li>
+                    <li>
+                        Fusce condimentum
+                    </li>
+                    <li>
+                        Ut non libero
+                    </li>
+                    <li>
+                        Consecte adiping elit
+                    </li>
+                </ul>
+                <div class="pricing-footer">
+                    <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                    </p>
+                    <a href="javascript:;" class="btn yellow-crusta">
+                    Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--//End Pricing -->
+    </div>
+</section>
 <section class="main-section team" id="pricing"><!--main-section team-start-->
     <div class="container">
         <h2>Pricing</h2>

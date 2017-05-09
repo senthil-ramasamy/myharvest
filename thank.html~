@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>myharvest</title>
+	</head>
+
+	<body>
+		<div id="thankyou" class="thank">
+		<p class="thanking">Hey there! thanks for registering in myharvest</p>
+                <a class="linkstyle" href="#">Get Back</a>		
+		</div>
+	</body>
+
+</html>

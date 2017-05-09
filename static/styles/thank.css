@@ -1,0 +1,38 @@
+.thanking{
+
+	font-family: 'Montserrat', sans-serif;
+	font-size:35px;
+	position: relative;
+    left:450px;
+	top:25px;
+}
+.thanking2{
+	
+	font-family: 'Montserrat', sans-serif;
+	font-size:35px;
+	position: relative;
+    left:400px;
+	top:25px;
+}
+
+.logo{
+	position: relative;
+	top:60px;
+}
+
+.linkstyle{
+	position: relative;
+	padding:15px 35px;
+	background:rgba(140, 198, 63, 0.78);
+	color:#fff !important;
+	font-size:16px;
+	text-decoration:none;
+	font-weight:400;
+	font-family: 'Montserrat', sans-serif;
+	display:inline-block;
+	border-radius:3px;
+	text-transform:uppercase;
+	line-height:25px;
+	top:30px;
+	margin-bottom:20px;
+}

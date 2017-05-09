@@ -1,0 +1,946 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+<title>myHarvest - Grow your own! Eat healthy!</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script src="contactform/contactform.js"></script>
+<script>
+jQuery(function () {
+    var $els = $('div[id^=quote]'),
+        i = 0,
+        len = $els.length;
+
+    $els.slice(1).hide();
+    setInterval(function () {
+        $els.eq(i).fadeOut(function () {
+            i = (i + 1) % len
+            $els.eq(i).fadeIn();
+        })
+    }, 4500)
+})
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#myModalpopup").modal('show');
+    });
+</script>
+<script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="32c1d134-7718-42a1-bef6-d524e95b6109";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.im/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+</head>
+<body>
+<div id="myModalpopup" class="modal fade">
+    <div class="modal-dialog"><center>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Looking for some unique, fun and creative activities to engage your child this summer ?</h4>
+            </div>
+            <div class="modal-body">
+                    <img src="img/camp.jpg">
+                <form action="https://www.instamojo.com/myharvest/home-gardening-pot-painting-for-kids/"><br/>
+                    <button type="submit" class="btn btn-success">Register Now</button>
+                    </form>
+            </div>
+        </div>
+        </center>
+    </div>
+</div>
+<header class="header" id="header" style="padding-top:100px;padding-bottom: 100px;"><!--header-start-->
+	<div class="container">
+    		
+        <div class="row">
+                <div class="col-md-7" style="text-align: center;padding-top: 50px;">
+        <figure class="logo animated fadeInDown delay-07s">
+            <a href="#"><img src="img/Logo112.png" alt=""></a> 
+        </figure>
+        <div id="quote2">
+        <h1 class="animated fadeInDown delay-07s">With <span style="color:#8cc63f;">myHarvest</span>, you can now become an Urban Farmer</h1>
+        </div>
+        <div id="quote1">
+        <h1 class="animated fadeInDown delay-07s">Now enjoy Fresh &amp; Healthy food that you can <br/>trust !</h1>
+        </div>
+        <ul class="we-create animated fadeInUp delay-1s">
+            <!-- <div id="quote2">
+            <li style="text-transform: none;margin:10px;">With myHarvest, you can now become an Urban Farmer !</li>
+            </div>
+            <div id="quote1">
+            <li style="text-transform: none;margin:10px;">Now enjoy Fresh &amp; Healthy food that you can trust !</li>
+            </div>
+             -->
+             <li style="text-transform: none;">#BalconyTerraceGarden #ChemicalFree #Healthy #GreenHobby</li>
+        </ul>
+            <a class="link animated fadeInUp delay-1s" href="#">Get Started</a>
+        </div>
+
+        <div class="col-md-5" style="padding-top: 100px; padding-bottom: 100px;">
+        <div>
+            <div class="row main"> 
+                <div class="main-login main-center">
+                <h5 style="font-weight:700!important;">Interested to have a Kitchen Garden at Home?</h5><br/>
+                <!-- <h5>Relax...! Share your details &amp; We'll set it up!</h5> -->
+                    <form class="" method="post" action="http://127.0.0.1:5000/task1">
+                        
+                        <div class="form-group">
+                            <!--label for="name" class="cols-sm-2 control-label">Your Name</label-->
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="name" id="name" required="required"  placeholder="Your Name"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- <label for="email" class="cols-sm-2 control-label" style="text-align: left!important;">Your eMail ID</label> -->
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="phone" id="mobile" required="required" placeholder="Your Mobile Number"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- <label for="username" class="cols-sm-2 control-label">Phone Number</label> -->
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="username" id="username" required="required" placeholder="Your Email"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!--bel for="password" class="cols-sm-2 control-label">Password</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="form-group ">
+                            <input type ="submit" id="button" value="Register" class="btn btn-primary btn-lg btn-block login-button"/>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</header><!--header-end-->
+
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+	<div class="container">
+        <ul class="main-nav">
+        	<li><a href="#header">Home </a></li>
+            <li><a href="#service">Why Us ?</a></li>
+            <li><a href="#Portfolio">How We Work?</a></li>
+            <li class="small-logo"><a href="#header"><img src="img/logo121.png" height="80px" alt=""></a></li>
+            <li><a href="#client">Services</a></li>
+            <li><a href="#team">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+</nav><!--main-nav-end-->
+
+
+
+<section class="main-section" id="service"><!--main-section-start-->
+    <div class="container">
+        <h2>Grow Your Own ! Eat Healthy !</h2>
+        <h6>Enjoy fresh and healthy, chemical free, taste food that you can trust. Let's go the Organic way...!</h6>
+
+
+        <div class="row">
+            
+            <div class="col-lg-7 col-sm-8 featured-work">
+                <h2>Why myHarvest ?</h2>
+                <br/><br/>
+                <!--P class="padding-b">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.</P-->
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-02s">
+                        <i class="fa-heartbeat"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-02s">
+                        <h3>Better health &amp; Nutrition</h3>
+                        <p>Include more freshly picked home grown greens and vegetables in your diet</p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-04s">
+                        <i class="fa-leaf"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-04s">
+                        <h3>Make gardening your hobby</h3>
+                        <p>Relax and feel de-stressed as you experience the joy of planting, watering or harvesting. </p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-06s">
+                        <i class="fa-pagelines"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>Connect to Nature</h3>
+                        <p>Become eco-friendly as you grow more plants.  You naturally increase green cover and reduce carbon footprint. </p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-06s">
+                        <i class="fa-home"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>Own a green patch at home</h3>
+                        <p>Turn your rooftop, balcony or unused space into productive urban farms.</p>
+                    </div>    
+                </div>
+                <a class="Learn-More" href="#">Learn More</a>
+            </div>
+            <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+                <img  src="img/organic-food.png" alt="" style="padding-top: 100px;">
+            </figure>
+        </div>
+
+
+
+        <!--div class="row">
+            <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <i class="fa-paw"></i>
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>branding &amp; identity</h3>
+                        <p>Proin iaculis purus digni consequat sem digni ssim. Donec entum digni ssim.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <i class="fa-gear"></i>
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>web development</h3>
+                        <p>Proin iaculis purus consequat sem digni ssim. Digni ssim porttitora .</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <i class="fa-apple"></i>
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>mobile design</h3>
+                        <p>Proin iaculis purus consequat digni sem digni ssim. Purus donec porttitora entum.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <i class="fa-medkit"></i>
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>24/7 Support</h3>
+                        <p>Proin iaculis purus consequat sem digni ssim. Sem porttitora entum.</p>
+                    </div>
+                </div>
+            </div>
+            <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+                <img src="img/macbook-pro.png" alt="">
+            </figure>
+        
+        </div-->
+    </div>
+</section><!--main-section-end-->
+
+
+
+<section class="main-section alabaster"><!--main-section alabaster-start-->
+    <div class="container">
+        <div class="row">
+            <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+                <img  src="img/organic-banner-2.jpg" style="padding-top: 120px;" alt="">
+            </figure>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6 col-sm-8 featured-work">
+                <h2>How to get started ?</h2>
+                <P style="line-height: 30px;" class="padding-b">It’s all about your first step towards a happier and healthier living. You have the interest &amp; the space to grow but not sure of where to begin? Here is what we at “myHarvest” do !</P>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-02s">
+                        <i class="fa-circle-thin"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-02s">
+                        <h3>You choose a gardening package</h3>
+                        <p>We offer various kitchen gardening packages that enables your family to grow greens, vegetables, herbs and fruits. We also customize the garden as per your family needs. <a>View Packages</a></p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-04s">
+                        <i class="fa-circle-o"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-04s">
+                        <h3>We Setup the garden</h3>
+                        <p>On the scheduled date, our garden expert team brings all gardening materials including the soil, set up the kitchen garden and guides you to become an urban farmer.</p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-06s">
+                        <i class="fa-dot-circle-o"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>YOU GROW and harvest</h3>
+                        <p>Every day you water the plants and observe them closely. Within a month, you can start harvesting and eating home grown food.</p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-06s">
+                        <i class="fa-check-circle-o"></i>
+                    </div>  
+                    <div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>WE HELP YOU MAINTAIN</h3>
+                        <p>Planting a kitchen garden is a lot like raising children. Plants need your care &amp; minimal time. Having realized this, we are there to make sure your plants are healthy all the time. </p>
+                    </div>    
+                </div>
+                <a class="Learn-More" href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section><!--main-section alabaster-end-->
+
+
+
+<section class="main-section paddind" id="Portfolio"><!--main-section-start-->
+    <div class="container">
+        <h2>What we offer ?</h2>
+        <h6>Fresh and Innovative methods that will keep you wanting more.</h6>
+      <div class="portfolioFilter">  
+        <ul class="Portfolio-nav wow fadeIn delay-02s">
+            <li><a href="#" data-filter="*" class="current" >All</a></li>
+            <li><a href="#" data-filter=".houses" >Houses</a></li>
+            <li><a href="#" data-filter=".schools" >Schools</a></li>
+            <li><a href="#" data-filter=".colleges" >Colleges</a></li>
+            <li><a href="#" data-filter=".corporates" >Corporates</a></li>
+        </ul>
+       </div> 
+        
+    </div>
+    <div class="portfolioContainer wow fadeInUp delay-04s">
+                <div class=" Portfolio-box houses">
+                    <a href="#"><img src="img/banner1.jpg" alt=""></a>   
+                    <h3>Urban Kitchen Garden Setup</h3>
+                    <p>At your backyard, balcony or terrace.</p>
+                </div>
+                <div class="Portfolio-box houses corporates">
+                    <a href="#"><img src="img/banner2.jpg" alt=""></a>   
+                    <h3>myHarvest Giftbox</h3>
+                    <p>A wonderful return gift to wish good health!</p>
+                </div>
+                <div class=" Portfolio-box houses schools colleges">
+                    <a href="#"><img src="img/banner3.jpg" alt=""></a>   
+                    <h3>Organic Gardening Workshops</h3>
+                    <p>Hands-on sessions for Organizations.</p>
+                </div>
+                <div class=" Portfolio-box corporates schools colleges" >
+                    <a href="#"><img src="img/banner4.jpg" alt=""></a>   
+                    <h3>“Grow your own food” Program </h3>
+                    <p>Creating edible gardens at your place!</p>
+                </div>
+                <div class=" Portfolio-box corporates schools colleges">
+                    <a href="#"><img src="img/banner5.jpg" alt=""></a>   
+                    <h3>'Go Green' Campaigns</h3>
+                    <p>In association with forums, events &amp; retail outlets.</p>
+                </div>
+                <div class=" Portfolio-box schools colleges">
+                    <a href="#"><img src="img/banner6.jpg" alt=""></a>   
+                    <h3>Farm Visits</h3>
+                    <p>Enjoy a day away from the city!</p>
+                </div>
+    </div>
+</section><!--main-section-end-->
+
+<section class="business-talking"><!--business-talking-start-->
+    <div class="container" style="padding-bottom:40px;">
+        <h2>Want to view Our Previous Works ?</h2>
+        <a class="link animated fadeInUp delay-1s" href="#" >View Our Happy &amp; Green Albums</a>
+    </div>
+</section><!--business-talking-end-->
+
+<section id="pricing1">
+
+<div class="container content1">
+    <div class="row">
+        <!-- Pricing --><br.>
+        <h2>Pricing</h2>
+        <h6>Take a closer look into our amazing team. We won’t bite.</h6>
+        
+        <div class="col-md-3">
+            <div class="pricing hover-effect">
+                <div class="pricing-head">
+                    <h3>Green Kits <span>
+                    Just for starters!</span>
+                    </h3>
+                    <h4><i>Rs.</i>2000<i></i>
+                    <span>
+                    </span>
+                    </h4>
+                </div>
+                <ul class="pricing-content list-unstyled"><center>
+                    <li>
+                        Choose 5 Varieties of Greens
+                    </li>
+                    <li>
+                        50 Kgs of Potting Mix
+                    </li>
+                    <li>
+                        Growth enhancers (natural fertilizers)
+                    </li>
+                    <li>
+                        Natural pest repellents
+                    </li>
+                    <li>
+                        Gardening tools (Water sprinkler, pesticide sprayer head, measuring cup)
+                    </li>
+                    <li>
+                        Online support
+                    </li>
+                </center></ul>
+                <div class="pricing-footer">
+                    <!-- <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                    </p> -->
+                    <a href="javascript:;" class="btn yellow-crusta">
+                    Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="pricing hover-effect">
+                <div class="pricing-head">
+                    <h3>Starter Kit<span>
+                    Get Your Interests Rolling!</span>
+                    </h3>
+                    <h4><i>Rs.</i>3000<i></i>
+                    <span>
+                    </span>
+                    </h4>
+                </div>
+                <ul class="pricing-content list-unstyled"><center>
+                    <li>
+                        Choose 3 Greens Varieties &amp; 2 Veggies
+                    </li>
+                    <li>
+                        80 Kgs of Potting Mix
+                    </li>
+                    <li>
+                        Growth enhancers (natural fertilizers &amp; and bio fertilizers)
+                    </li>
+                    <li>
+                        Natural pest repellents
+                    </li>
+                    <li>
+                        Gardening tools (Water sprinkler, pesticide sprayer head, measuring cup)
+                    </li>
+                    <li>
+                        Complimentary visit for garden health check
+                    </li>
+                    <li>
+                        Online support
+                    </li>
+                </center>
+                </ul>
+                <div class="pricing-footer">
+                    <!-- <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                    </p> -->
+                    <a href="javascript:;" class="btn yellow-crusta">
+                    Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="pricing pricing-active hover-effect">
+                <div class="pricing-head pricing-head-active">
+                    <h3>Family Kit<span>
+                    The Best Pack Ever </span>
+                    </h3>
+                    <h4><i>Rs.</i>6000<i></i>
+                    <span>
+                    </span>
+                    </h4>
+                </div>
+                <ul class="pricing-content list-unstyled">
+                    <center>
+                    <li>
+                        Choose 10 sets of plants (3 Greens, 4 Veggies Option &amp; 1 Herb)
+                    </li>
+                    <li>
+                        160 Kgs of Potting Mix
+                    </li>
+                    <li>
+                        Growth enhancers (natural fertilizers &amp; and bio fertilizers)
+                    </li>
+                    <li>
+                        Natural pest repellents
+                    </li>
+                    <li>
+                        Gardening tools (Water sprinkler, pesticide sprayer head, measuring cup)
+                    </li>
+                    <li>
+                        2 Complimentary visit for garden health check
+                    </li>
+                    <li>
+                        Online support
+                    </li>
+                </center>
+                </ul>
+                <div class="pricing-footer">
+                   <!--  <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                    </p> -->
+                    <a href="javascript:;" class="btn yellow-crusta">
+                    Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="pricing hover-effect">
+                <div class="pricing-head">
+                    <h3>Special Package<span>
+                    Made just for you!</span>
+                    </h3>
+                    <h4 style="font-size:34px;padding-top:10px;padding-bottom:10px;">Get Quote<i></i>
+                    <span>
+                    </span>
+                    </h4>
+                </div>
+                <ul class="pricing-content list-unstyled"><center>
+                    <li><br/>
+                        We also customize gardening packages based on your family needs and the available space.<br/>
+                        <br/><br/>
+                        Also we provide personalized packages to turn your backyard into a beautiful kitchen garden. <a href="#contact">Call us</a> for more details.<br/>
+                    </li></center>
+                </ul>
+                <div class="pricing-footer">
+                    <!-- <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                    </p> -->
+                    <a href="javascript:;" class="btn yellow-crusta">
+                    Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--//End Pricing -->
+    </div>
+</section>
+<!-- <section class="main-section team" id="pricing">
+    <div class="container">
+        <h2>Pricing</h2>
+        <h6>Take a closer look into our amazing team. We won’t bite.</h6>
+        <div class="team-leader-block clearfix">
+            <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-03s"> 
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/Logo112.png" alt="">
+                    <ul>
+                        <li><a href="#" class="fa-twitter"></a></li>
+                        <li><a href="#" class="fa-facebook"></a></li>
+                        <li><a href="#" class="fa-pinterest"></a></li>
+                        <li><a href="#" class="fa-google-plus"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-03s"><strong>Green Kits</strong></h3>
+                <span class="wow fadeInDown delay-03s">Rs. 2000.00</span>
+                <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+            </div>
+            <div class="team-leader-box">
+                <div class="team-leader  wow fadeInDown delay-06s"> 
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/Logo112.png" alt="">
+                    <ul>
+                        <li><H2>HI</H2></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-06s"><strong>Strater Kits</strong></h3>
+                <span class="wow fadeInDown delay-06s">Rs. 3000.00</span>
+                <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+            </div>
+            <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-09s"> 
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/Logo112.png" alt="">
+                    <ul>
+                        <li><a href="#" class="fa-twitter"></a></li>
+                        <li><a href="#" class="fa-facebook"></a></li>
+                        <li><a href="#" class="fa-pinterest"></a></li>
+                        <li><a href="#" class="fa-google-plus"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-09s"><strong>Family Kits</strong></h3>
+                <span class="wow fadeInDown delay-09s">Rs. 5000.00</span>
+                <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
+            </div>
+        </div>
+    </div>
+</section>
+ -->
+
+<section class="main-section client-part" id="client"><!--main-section client-part-start-->
+    <div class="container">
+        <b class="quote-right wow fadeInDown delay-03"><i class="fa-quote-right"></i></b>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="client-part-haead wow fadeInDown delay-05">The students were excited to see their garden give them fresh vegetables and felt joyful taking the produce to their parents.</p>
+            </div>
+        </div>
+        <ul class="client wow fadeIn delay-05s">
+            <li><a href="#">
+                <img src="img/jain.png" alt="">
+                <h3>Ms. Vijayakumari</h3>
+                <span>Principal of Jain Vidhayalaya, Madurai</span>
+            </a></li>
+        </ul>
+    </div>
+</section><!--main-section client-part-end-->
+<div class="c-logo-part"><!--c-logo-part-start-->
+    <div class="container">
+        <h2 style="color:#000000!important;">In Association With</h2> 
+        <ul>
+            <li><a href="#"><img src="img/auced1.png" alt="" width="140px"></a></li>
+            <li><a href="#"><img src="img/unltd.png" alt=""></a></li>
+            <li><a href="#"><img src="img/restore1.png" alt="" width="140px"></a></li>
+            <!-- <li><a href="#"><img src="img/c-liogo4.png" alt=""></a></li>
+            <li><a href="#"><img src="img/c-liogo5.png" alt=""></a></li>
+         -->
+         </ul>
+    </div>
+</div><!--c-logo-part-end-->
+<section class="main-section team" id="team"><!--main-section team-start-->
+    <div class="container">
+        <h2>team</h2>
+        <h6>Take a closer look into our amazing team.</h6>
+
+        <div class="team-leader-block clearfix">
+        <div class="row">
+        <div class="col-md-2"></div>
+        
+            <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-03s"> 
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/archana.jpg" alt="">
+                    <ul>
+                        <li><a href="#" class="fa-twitter"></a></li>
+                        <li><a href="#" class="fa-facebook"></a></li>
+                        <li><a href="#" class="fa-pinterest"></a></li>
+                        <li><a href="#" class="fa-google-plus"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-03s">Archana P Stalin</h3>
+                <span class="wow fadeInDown delay-03s">Founder &amp; Green Champion</span>
+                
+            </div>
+            <div class="team-leader-box">
+                <div class="team-leader  wow fadeInDown delay-06s"> 
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/Logo112.png" alt="">
+                    <ul>
+                        <li><a href="#" class="fa-twitter"></a></li>
+                        <li><a href="#" class="fa-facebook"></a></li>
+                        <li><a href="#" class="fa-pinterest"></a></li>
+                        <li><a href="#" class="fa-google-plus"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-06s">Somu K</h3>
+                <span class="wow fadeInDown delay-06s">Chief Garden Executive</span>
+                
+            </div>
+            <!-- <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-09s"> 
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/Logo112.png" alt="">
+                    <ul>
+                        <li><a href="#" class="fa-twitter"></a></li>
+                        <li><a href="#" class="fa-facebook"></a></li>
+                        <li><a href="#" class="fa-pinterest"></a></li>
+                        <li><a href="#" class="fa-google-plus"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-09s">Skyler white</h3>
+                <span class="wow fadeInDown delay-09s">Accountant</span>
+               
+            </div>
+        </div> -->
+        </div>
+    </div>
+</section><!--main-section team-end-->
+
+
+
+<section class="business-talking"><!--business-talking-start-->
+    <div class="container">
+        <h2>What Media Talks About Us.</h2>
+
+<section id="carousel1">                    
+    <div class="container1">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- <div class="quote1"><i class="fa fa-camera fa-4x"></i></div> -->
+                <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                  <!-- Carousel indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
+                    <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                    <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
+                    <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+                    <!-- 
+                    <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+                    <li data-target="#fade-quote-carousel" data-slide-to="5"></li> -->
+                  </ol>
+                  <!-- Carousel items -->
+                  <div class="carousel-inner">
+                    
+                    <div class="item">
+                        <div ><img src="img/ndtv.png" width="180px"></div>
+                        <blockquote>
+                            <p>"Green start-ups cater to growing demand for home gardens"<br/><br/><strong><!-- DT Next<br/><br/> --><a href="http://www.dtnext.in/News/Citizen/2017/01/17111812/1025591/Green-startups-cater-to-growing-demand-for-home-gardens.vpf?TId=112144">Read More <i class="fa-caret-right"></i></a></strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="item">
+                        <div ><img src="img/dtnext.png" width="180px"></div>
+                        <blockquote>
+                            <p>"Green start-ups cater to growing demand for home gardens"<br/><br/><strong><!-- DT Next<br/><br/> --><a href="http://www.dtnext.in/News/Citizen/2017/01/17111812/1025591/Green-startups-cater-to-growing-demand-for-home-gardens.vpf?TId=112144">Read More <i class="fa-caret-right"></i></a></strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="active item">
+                        <div ><img src="img/tie.png"></div>
+                        <blockquote>
+                            <p>"Taking Farming To The Rooftops – Archana Stalin, CEO, myHarvest"<br/><br/><strong><!-- DT Next<br/><br/> --><a href="http://theindianenlightenment.com/2017/02/22/farming-on-the-rooftops-with-myharvest-archana-stalin/"></i></a></strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="item">
+                        <div ><img src="img/deccan.png" style="background-color:white;"></div>
+                        <blockquote>
+                            <p>"Embraching the farming life"<br/><br/><strong><!-- DT Next<br/><br/> --><a href="http://www.dtnext.in/News/Citizen/2017/01/17111812/1025591/Green-startups-cater-to-growing-demand-for-home-gardens.vpf?TId=112144">Read More <i class="fa-caret-right"></i></a></strong></p>
+                        </blockquote>
+                    </div>
+                    <!-- <div class="item">
+                        <div ><img src="img/dtnext.png"></div>
+                        <blockquote>
+                            <p>"Green start-ups cater to growing demand for home gardens"<br/><br/><strong>DT Next<br/><br/><a href="http://www.dtnext.in/News/Citizen/2017/01/17111812/1025591/Green-startups-cater-to-growing-demand-for-home-gardens.vpf?TId=112144">Read More <i class="fa-caret-right"></i></a></strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="item">
+                        <div ><img src="img/dtnext.png"></div>
+                        <blockquote>
+                            <p>"Green start-ups cater to growing demand for home gardens"<br/><br/><strong> DT Next<br/><br/><a href="http://www.dtnext.in/News/Citizen/2017/01/17111812/1025591/Green-startups-cater-to-growing-demand-for-home-gardens.vpf?TId=112144">Read More <i class="fa-caret-right"></i></a></strong></p>
+                        </blockquote>
+                    </div> -->
+                  </div>
+                </div>
+            </div>                          
+        </div>
+    </div>
+</section>
+    </div>
+</section><!--business-talking-end-->
+<div class="container">
+<section class="main-section contact" id="contact">
+    
+        <div class="row">
+            <div class="col-lg-6 col-sm-7 wow fadeInLeft">
+                <div class="contact-info-box address clearfix">
+                    <h3><i class=" icon-map-marker"></i>Address:</h3>
+                    <span>CEGAIN, CPDE 1st floor,<br/> College of Engineering, Guindy, Anna University, Chennai -25</span>
+                </div>
+                <div class="contact-info-box phone clearfix">
+                    <h3><i class="fa-phone"></i>Phone:</h3>
+                    <span>+91-8220-043-502</span>
+                </div>
+                <div class="contact-info-box email clearfix">
+                    <h3><i class="fa-pencil"></i>email:</h3>
+                    <span>archustalin@gmail.com</span>
+                </div>
+                <div class="contact-info-box hours clearfix">
+                    <h3><i class="fa-clock-o"></i>Hours:</h3>
+                    <span><strong>All days !!!</strong> 10am to 7pm<br></span>
+                </div>
+                <ul class="social-link">
+                    <li class="twitter"><a href="fb.com/myHarvest.in"><i class="fa-twitter"></i></a></li>
+                    <li class="facebook"><a href="#"><i class="fa-facebook"></i></a></li>
+                    <li class="pinterest"><a href="#"><i class="fa-pinterest"></i></a></li>
+                    <li class="gplus"><a href="#"><i class="fa-google-plus"></i></a></li>
+                    <li class="dribbble"><a href="#"><i class="fa-dribbble"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
+                <div class="form">
+                    
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>
+                    <form action="" method="post" role="form" class="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control input-text" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control input-text" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-text" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control input-text text-area" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                        
+                        <div class="text-center"><button type="submit" class="input-btn">Send Message</button></div>
+                    </form>
+                </div>  
+            </div>
+        </div>
+</section>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
+        <span class="copyright">&copy; myHarvest 2017. All Rights Reserved</span>
+    </div>
+</footer>
+
+
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#test').scrollToFixed();
+        $('.res-nav_click').click(function(){
+            $('.main-nav').slideToggle();
+            return false    
+            
+        });
+        
+    });
+</script>
+
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+  </script>
+
+
+<script type="text/javascript">
+    $(window).load(function(){
+        
+        $('.main-nav li a').bind('click',function(event){
+            var $anchor = $(this);
+            
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top - 102
+            }, 1500,'easeInOutExpo');
+            /*
+            if you don't want to use the easing effects:
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1000);
+            */
+            event.preventDefault();
+        });
+    })
+</script>
+
+<script type="text/javascript">
+
+$(window).load(function(){
+  
+  
+  var $container = $('.portfolioContainer'),
+      $body = $('body'),
+      colW = 375,
+      columns = null;
+
+  
+  $container.isotope({
+    // disable window resizing
+    resizable: true,
+    masonry: {
+      columnWidth: colW
+    }
+  });
+  
+  $(window).smartresize(function(){
+    // check if columns has changed
+    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    if ( currentColumns !== columns ) {
+      // set new column count
+      columns = currentColumns;
+      // apply width to container manually, then trigger relayout
+      $container.width( columns * colW )
+        .isotope('reLayout');
+    }
+    
+  }).smartresize(); // trigger resize to set container width
+  $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            
+            filter: selector,
+         });
+         return false;
+    });
+  
+});
+
+</script>
+
+</body>
+</html>

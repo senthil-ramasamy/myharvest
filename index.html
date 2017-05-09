@@ -106,14 +106,13 @@ jQuery(function () {
                 <div class="main-login main-center">
                 <h5 style="font-weight:700!important;">Interested to have a Kitchen Garden at Home?</h5><br/>
                 <!-- <h5>Relax...! Share your details &amp; We'll set it up!</h5> -->
-                    <form class="" method="post" action="#">
-                        
+                    <form class="" method="post" action="http://myharvet.in:5000/task1">
                         <div class="form-group">
                             <!--label for="name" class="cols-sm-2 control-label">Your Name</label-->
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="name" id="name"  placeholder="Your Name"/>
+                                    <input type="text" class="form-control" name="name" id="name" required="required"  placeholder="Your Name"/>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +122,7 @@ jQuery(function () {
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="email" id="email"  placeholder="Your Mobile Number"/>
+                                    <input type="text" class="form-control" name="phone" id="mobile" required="required" placeholder="Your Mobile Number"/>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +132,7 @@ jQuery(function () {
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="username" id="username"  placeholder="Your Email"/>
+                                    <input type="text" class="form-control" name="username" id="username" required="required" placeholder="Your Email"/>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +157,7 @@ jQuery(function () {
                             </div>
                         </div>-->
                         <div class="form-group ">
-                            <a href="" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button"><strong>Register</strong></a>
+                            <input type ="submit" id="button" value="Register" class="btn btn-primary btn-lg btn-block login-button"/>
                         </div>
                         
                     </form>

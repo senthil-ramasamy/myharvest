@@ -1,0 +1,16 @@
+<html>
+
+	<head>
+		<title>myharvest</title>
+	</head>
+
+	<body>
+		<form action="" method="get">
+			
+			<div id="">
+				<center><h3>ThankYou for registering in myharvest</h3></center>
+				<input type="submit" name="back">		
+			</div>
+	</body>
+
+</html>
